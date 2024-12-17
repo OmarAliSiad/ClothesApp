@@ -55,7 +55,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                   ZoomIn(
                     duration: const Duration(milliseconds: 1200),
                     child: Text(
-                      '${widget.cardItemModel!.title}',
+                      widget.cardItemModel!.title,
                       style: AppStyles.styleMedium18(context)
                           .copyWith(fontSize: 20),
                     ),
@@ -64,7 +64,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                   ZoomIn(
                     duration: const Duration(milliseconds: 1200),
                     child: Text(
-                      "\$${widget.cardItemModel!.price}00".substring(0, 6),
+                      "${widget.cardItemModel!.price} EGP",
                       style: AppStyles.styleBold24(context)
                           .copyWith(color: const Color(0xff1A0F91)),
                     ),

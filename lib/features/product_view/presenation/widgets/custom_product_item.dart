@@ -72,7 +72,7 @@ class CustomProductItem extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 8),
                     child: Text(
-                      '\$${cardItemModel.price.toString()}00'.substring(0, 6),
+                      '${cardItemModel.price.toString()} EGP',
                       style: AppStyles.styleBold14(context).copyWith(
                         fontFamily: GoogleFonts.lato().fontFamily,
                       ),
@@ -83,9 +83,6 @@ class CustomProductItem extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 13,
-              )
             ],
           ),
         ),

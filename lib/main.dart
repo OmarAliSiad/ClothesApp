@@ -50,7 +50,10 @@ class _MyAppState extends State<MyApp> {
         HomeView.id: (context) => const HomeView(),
         ProductView.id: (context) => const ProductView(),
       },
-      home: const SplashView(),
+      home: FirebaseAuth.instance.currentUser != null &&
+              FirebaseAuth.instance.currentUser!.emailVerified
+          ? const MainScreen()
+          : const SplashView(),
     );
   }
 }
